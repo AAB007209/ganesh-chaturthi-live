@@ -1,0 +1,68 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0A0D18;
+  overflow: hidden;
+  font-family: "Jost", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+*, *::before, *::after { box-sizing: border-box; }
+#root { height: 100%; }
+a { color: #E9A93C; text-decoration: none; }
+a:hover { color: #F6E9D0; }
+
+input[type=range] { -webkit-appearance: none; appearance: none; background: transparent; }
+input[type=range]::-webkit-slider-runnable-track { height: 3px; border-radius: 3px; background: rgba(242,227,198,.25); }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 11px; height: 11px; margin-top: -4px; border-radius: 50%; background: #F2E3C6; }
+
+::selection { background: rgba(224,102,42,.4); }
+select option { background: #14110F; color: #F2E3C6; }
+
+@keyframes emberRise {
+  0% { transform: translateY(0) scale(.9); opacity: 0; }
+  25% { opacity: .75; }
+  100% { transform: translateY(-190px) scale(.35); opacity: 0; }
+}
+@keyframes hotPulse {
+  0% { transform: scale(1); opacity: .8; }
+  70% { transform: scale(2.3); opacity: 0; }
+  100% { transform: scale(2.3); opacity: 0; }
+}
+@keyframes petalFall {
+  0% { transform: translate3d(0,-12vh,0) rotate(0); opacity: 0; }
+  9% { opacity: .7; }
+  100% { transform: translate3d(var(--drift),112vh,0) rotate(420deg); opacity: 0; }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes floatUp {
+  from { opacity: 0; transform: translate(-50%,26px); }
+  to { opacity: 1; transform: translate(-50%,0); }
+}
+
+.hover-fade { transition: opacity .25s; }
+.hover-fade:hover { opacity: 1; }
+
+/* Hover states for elements whose base style is otherwise data-driven inline style */
+.gc-icon-btn:hover { background: rgba(255,255,255,.08); }
+.gc-icon-btn-c:hover { background: rgba(255,255,255,.08); color: #F6E9D0; }
+.gc-play-btn:hover { background: radial-gradient(circle at 34% 28%,#FF9C4C,#EA6E2E); }
+.gc-credit-link:hover { opacity: 1; }
+.gc-hamburger:hover { background: rgba(242,227,198,.1); }
+.gc-centre-pill:hover { color: #F6E9D0; border-color: rgba(233,169,60,.45); }
+.gc-picker:hover { border-color: rgba(233,169,60,.55); }
+.gc-hotspot:hover { transform: scale(1.08); }
+.gc-panel-close:hover { color: #F6E9D0; background: rgba(255,255,255,.09); }
+.gc-back-link:hover { color: #E9A93C; }
+.gc-follow-btn:hover { border-color: #E9A93C; color: #F6E9D0; }
+.gc-song-row:hover { background: rgba(255,255,255,.06) !important; }
+.gc-link-row:hover { background: rgba(233,169,60,.1); border-color: rgba(233,169,60,.42); transform: translateX(4px); }
+.gc-menu-close:hover { color: #F6E9D0; }
+.gc-nav-item:hover { color: #F6E9D0 !important; }
+.gc-social-btn:hover { background: rgba(233,169,60,.16); border-color: rgba(233,169,60,.5); color: #F6E9D0; }
+.gc-music-link:hover { opacity: .85; }
+.gc-chapter-card:hover { border-color: rgba(233,169,60,.4); transform: translateY(-2px); background: rgba(255,255,255,.07); }
