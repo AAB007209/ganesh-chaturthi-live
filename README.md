@@ -2,7 +2,7 @@
 
 A single-page tribute to Ganesh Chaturthi: one festival street, staged as a living scene that changes with the time of day, carries a playlist that follows the hour, and hides little stories behind the things sitting on the street.
 
-**[Live site →](https://ganesh-chaturthi-live.vercel.app)** *(update with your actual deployment URL)*
+**Live site →** https://ganesh-chaturthi-live.vercel.app
 
 ![Morning scene](docs/screenshots/morning.jpg)
 
