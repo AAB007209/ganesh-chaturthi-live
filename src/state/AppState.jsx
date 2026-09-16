@@ -62,12 +62,17 @@ export function AppStateProvider({ children }) {
   useEffect(() => {
     if (devoteeCountedRef.current) return; // guard against React StrictMode's double-invoke in dev
     devoteeCountedRef.current = true;
-    fetch('/api/devotees', { method: 'POST' })
+    let hasVisited = false;
+    try { hasVisited = localStorage.getItem('devotees_has_visited') === 'true'; } catch {}
+    fetch('/api/devotees', { method: hasVisited ? 'GET' : 'POST' })
       .then((r) => (r.ok ? r.json() : null))
       .then((data) => {
         if (!data || typeof data.count !== 'number') return;
         setDevoteeCount(data.count);
-        try { localStorage.setItem('devotees_count_cache', String(data.count)); } catch {}
+        try {
+          localStorage.setItem('devotees_count_cache', String(data.count));
+          if (!hasVisited) localStorage.setItem('devotees_has_visited', 'true');
+        } catch {}
       })
       .catch(() => {});
   }, []);
