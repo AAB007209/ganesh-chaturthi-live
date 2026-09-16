@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 
   try {
     const redis = Redis.fromEnv();
-    await redis.setnx(KEY, lastKnownCount ?? SEED);
+    // INCR on a missing key initializes it to 0 first, so no separate seed call is needed.
     const count = req.method === 'POST' ? await redis.incr(KEY) : await redis.get(KEY);
     lastKnownCount = count ?? lastKnownCount ?? SEED;
     res.status(200).json({ count: lastKnownCount });

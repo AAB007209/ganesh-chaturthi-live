@@ -49,14 +49,26 @@ export function AppStateProvider({ children }) {
   const [ytReady, setYtReady] = useState(false);
   const playerRef = useRef(null);
 
-  const [devoteeCount, setDevoteeCount] = useState(8921);
+  // Shows last visit's count instantly (no 0-flash) while the real count loads in the background.
+  const [devoteeCount, setDevoteeCount] = useState(() => {
+    try {
+      const cached = Number(localStorage.getItem('devotees_count_cache'));
+      return Number.isFinite(cached) && cached > 0 ? cached : 0;
+    } catch {
+      return 0;
+    }
+  });
   const devoteeCountedRef = useRef(false);
   useEffect(() => {
     if (devoteeCountedRef.current) return; // guard against React StrictMode's double-invoke in dev
     devoteeCountedRef.current = true;
     fetch('/api/devotees', { method: 'POST' })
       .then((r) => (r.ok ? r.json() : null))
-      .then((data) => { if (data && typeof data.count === 'number') setDevoteeCount(data.count); })
+      .then((data) => {
+        if (!data || typeof data.count !== 'number') return;
+        setDevoteeCount(data.count);
+        try { localStorage.setItem('devotees_count_cache', String(data.count)); } catch {}
+      })
       .catch(() => {});
   }, []);
 
