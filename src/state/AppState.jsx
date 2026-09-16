@@ -183,7 +183,7 @@ export function AppStateProvider({ children }) {
   const py = (fy) => Math.round(oy + (boxH - dh) / 2 + fy * dh) + 'px';
 
   const roomForPins = vw >= 900 && vh >= 520;
-  const roomForDhol = vw >= 1020 && vh >= 560;
+  const roomForDhol = vw >= 1020 && vh >= 660;
   const narrow = vw < 720;
   const mid = vw < 860;
 
@@ -195,7 +195,7 @@ export function AppStateProvider({ children }) {
           open: () => setTopic(p.k),
         })),
         ...(ph.key === 'morning' && roomForDhol
-          ? [{ key: 'dhol', x: px(0.102), y: py(0.8798), label: TOPICS.dhol.label, open: () => setTopic('dhol') }]
+          ? [{ key: 'dhol', x: px(0.19), y: py(0.755), label: TOPICS.dhol.label, open: () => setTopic('dhol') }]
           : []),
       ]
     : [];
@@ -250,6 +250,8 @@ export function AppStateProvider({ children }) {
     heroMaxH: narrow ? 'calc(100vh - 290px)' : 'calc(100vh - 240px)',
     playerFilter: onHome ? 'blur(0px)' : 'blur(8px) saturate(.75) brightness(.55)',
     playerOpacity: onHome ? 1 : 0.5,
+    playerZIndex: onHome ? 45 : 30,
+    playerEvents: onHome ? 'auto' : 'none',
 
     tint: ph.tint,
     stageLayers,

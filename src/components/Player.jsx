@@ -3,21 +3,21 @@ import { useApp } from '../state/AppState.jsx';
 
 export default function Player() {
   const {
-    playerCols, playerRowGap, playerPad, playerFilter, playerOpacity, goMusic, artSize, nowArt,
+    playerCols, playerRowGap, playerPad, playerFilter, playerOpacity, playerZIndex, playerEvents, goMusic, artSize, nowArt,
     nowTitleSize, nowTitle, nowArtist, transportJustify, extraCtlDisplay, shuffleColor, toggleShuffle,
-    prev, togglePlay, playing, next, loopColor, toggleLoop, toggleMute, volumeDisplay, vol, setVolume,
+    prev, togglePlay, playing, next, loopColor, toggleLoop, toggleMute, muted, volumeDisplay, vol, setVolume,
     elapsed, seek, progress, duration, noteCol, noteJustify, noteDisplay,
   } = useApp();
 
   return (
     <div style={{
-      position: 'absolute', left: '50%', bottom: 28, transform: 'translateX(-50%)', zIndex: 45,
+      position: 'absolute', left: '50%', bottom: 28, transform: 'translateX(-50%)', zIndex: playerZIndex,
       width: 'min(880px,calc(100vw - 24px))', display: 'grid', gridTemplateColumns: playerCols,
       alignItems: 'center', columnGap: 'clamp(12px,2vw,24px)', rowGap: playerRowGap, padding: playerPad,
       borderRadius: 20, background: 'linear-gradient(rgba(24,17,14,.72),rgba(14,10,9,.82))',
       border: '1px solid rgba(242,227,198,.11)', backdropFilter: 'blur(22px) saturate(1.15)', WebkitBackdropFilter: 'blur(22px) saturate(1.15)',
       boxShadow: '0 30px 70px rgba(0,0,0,.5)', animation: 'floatUp 900ms 300ms cubic-bezier(.16,.8,.3,1) both',
-      filter: playerFilter, opacity: playerOpacity, transition: 'filter .5s ease,opacity .5s ease',
+      filter: playerFilter, opacity: playerOpacity, pointerEvents: playerEvents, transition: 'filter .5s ease,opacity .5s ease',
     }}>
       <div onClick={goMusic} className="gc-music-link" style={{ display: 'flex', alignItems: 'center', gap: 15, minWidth: 0, cursor: 'pointer' }}>
         <span style={{ flex: 'none', width: artSize, height: artSize, borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', background: nowArt, boxShadow: '0 6px 18px rgba(0,0,0,.45)' }}>
@@ -49,8 +49,12 @@ export default function Player() {
         <div onClick={toggleLoop} title="Repeat" className="gc-icon-btn" style={{ display: extraCtlDisplay, width: 32, height: 32, borderRadius: '50%', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: loopColor }}>
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M17 2l4 4-4 4M3 11v-1a4 4 0 0 1 4-4h14M7 22l-4-4 4-4M21 13v1a4 4 0 0 1-4 4H3" /></svg>
         </div>
-        <div onClick={toggleMute} title="Mute" className="gc-icon-btn-c" style={{ width: 32, height: 32, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: 'rgba(242,227,198,.75)' }}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M11 5 6 9H2v6h4l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" /></svg>
+        <div onClick={toggleMute} title={muted ? 'Unmute' : 'Mute'} className="gc-icon-btn-c" style={{ width: 32, height: 32, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: 'rgba(242,227,198,.75)' }}>
+          {muted ? (
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M11 5 6 9H2v6h4l5 4z" /><path d="M23 9l-6 6M17 9l6 6" /></svg>
+          ) : (
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M11 5 6 9H2v6h4l5 4zM15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" /></svg>
+          )}
         </div>
         <input type="range" min="0" max="100" value={vol} onChange={(e) => setVolume(+e.target.value)} style={{ display: volumeDisplay, width: 'clamp(56px,7vw,86px)', height: 11, cursor: 'pointer' }} />
       </div>

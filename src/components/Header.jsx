@@ -5,7 +5,7 @@ export default function Header() {
   const {
     headerPad, headerCols, clock, ph,
     festivalDisplay, devotees, pillOpacity, centreCol, centreRow, centreJustify,
-    centreCreditDisplay, goAbout, rightCol, rightPillPad, creditDisplay, toggleMenu,
+    centreCreditDisplay, rightCol, rightPillPad, creditDisplay, toggleMenu,
   } = useApp();
 
   return (
@@ -34,13 +34,13 @@ export default function Header() {
       </div>
 
       {/* Devotee counter / credit pill (centre) */}
-      <div onClick={goAbout} className="gc-centre-pill" style={{
+      <div className="gc-centre-pill" style={{
         gridColumn: centreCol, gridRow: centreRow, justifySelf: centreJustify, opacity: pillOpacity,
         transition: 'opacity .4s ease,color .25s,border-color .25s', maxWidth: 'min(46vw,420px)', overflow: 'hidden',
         display: 'flex', alignItems: 'center', height: 38, gap: 9, padding: '0 17px', borderRadius: 999,
         background: 'rgba(10,11,16,.5)', backdropFilter: 'blur(18px) saturate(1.15)', WebkitBackdropFilter: 'blur(18px) saturate(1.15)',
         border: '1px solid rgba(242,227,198,.12)', boxShadow: '0 8px 30px rgba(0,0,0,.35)',
-        color: 'rgba(242,227,198,.85)', fontSize: 'clamp(11px,1.02vw,13px)', whiteSpace: 'nowrap', cursor: 'pointer',
+        color: 'rgba(242,227,198,.85)', fontSize: 'clamp(11px,1.02vw,13px)', whiteSpace: 'nowrap',
       }}>
         <span style={{ flex: 'none', display: 'flex', color: '#3FCF6E' }}>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" style={{ display: 'block' }}><path d="M12 3.6a3.4 3.4 0 1 1 0 6.8 3.4 3.4 0 0 1 0-6.8zM5.4 20.4v-1.2c0-2.6 3-4.2 6.6-4.2s6.6 1.6 6.6 4.2v1.2" /></svg>

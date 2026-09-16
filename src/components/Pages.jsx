@@ -8,7 +8,7 @@ export default function Pages() {
   const { overlayTop, pageOpacity, pageEvents, pageY, goHome, pageKicker, isMusic, isStory, isAbout } = useApp();
 
   return (
-    <div data-page-scroll style={{
+    <div data-page-scroll className="gc-scroll" style={{
       position: 'absolute', top: overlayTop, left: 0, right: 0, bottom: 0, zIndex: 40,
       overflowY: 'auto', overflowX: 'hidden', opacity: pageOpacity, pointerEvents: pageEvents,
       transform: `translateY(${pageY})`, transition: 'opacity .45s ease,transform .5s cubic-bezier(.16,.8,.3,1)',

@@ -9,7 +9,7 @@ export const PHASES = [
   },
   {
     key: 'evening', label: 'Afternoon–Evening', from: 12, to: 19,
-    note: 'Sandhya aarti as the light turns. The whole lane sings Sukhkarta Dukhharta together.',
+    note: 'Sandhya aarti at dusk. Devotees gather before Bappa with flowers, diyas and prayers',
     img: 'sunset', light: true, bgPos: '50% 46%',
     tint: 'rgba(255,150,60,.2)', filter: 'brightness(1.02) saturate(1.06) contrast(1.02)',
     icon: 'M12 10V4M4.9 9.9l1.4 1.4M2 18h2M20 18h2M17.7 11.3l1.4-1.4M22 22H2M16 6l-4 4-4-4M16 18a4 4 0 0 0-8 0',
@@ -29,18 +29,37 @@ export const PHASES = [
 export const STAGE_IMAGE = { morning: 'ganesh-morning.png', sunset: 'ganesh-sunset.png', night: 'ganesh-night-2.png' };
 
 export const SONGS = [
-  { id: 'vakratunda', title: 'Vakratunda Mahakaya', artist: 'Suresh Wadkar', dur: 230, yt: 'BRL8z-UAGDo', art: ['#4B2E83', '#E9A93C'], moods: ['meditative', 'peaceful'], times: ['morning', 'night'] },
-  { id: 'sukhkarta', title: 'Sukhkarta Dukhharta', artist: 'Lata Mangeshkar', dur: 312, yt: 'h85xdHRX5T4', art: ['#8E2436', '#F3C05A'], moods: ['devotional', 'peaceful'], times: ['morning', 'evening'] },
-  { id: 'atharva', title: 'Ganapati Atharvashirsha', artist: 'Traditional chant', dur: 425, yt: '-NzffqdFu9Q', art: ['#123A46', '#D8C6A6'], moods: ['meditative', 'spiritual'], times: ['morning', 'night'] },
-  { id: 'shendur', title: 'Shendur Laal Chadhayo', artist: 'Traditional aarti', dur: 258, yt: 'vVgz3Pg-EMs', art: ['#A83B2A', '#F5D08A'], moods: ['devotional'], times: ['morning', 'evening'] },
-  { id: 'omkar', title: 'Omkar Swaroopa', artist: 'Ravindra Sathe', dur: 289, yt: '2gxvEnH-Lgs', art: ['#2C3F6B', '#E9A93C'], moods: ['spiritual', 'devotional'], times: ['morning', 'evening'] },
-  { id: 'ganraj', title: 'Ganraj Rangi Nachto', artist: 'Traditional', dur: 271, yt: 'egz1xOLfKRA', art: ['#7A1F3D', '#F0A93C'], moods: ['devotional', 'festive'], times: ['morning', 'evening'] },
-  { id: 'gajanana', title: 'Gajanana', artist: 'Sukhwinder Singh', dur: 281, yt: 'KJF8t-BWVRM', art: ['#B5472E', '#FFD98A'], moods: ['festive', 'energetic'], times: ['evening', 'night'] },
-  { id: 'devashree', title: 'Deva Shree Ganesha', artist: 'Ajay-Atul', dur: 295, yt: 'RCCYorPLJmQ', art: ['#C0341C', '#F7C356'], moods: ['energetic', 'festive'], times: ['evening', 'night'] },
-  { id: 'mouryare', title: 'Mourya Re', artist: 'Shankar Mahadevan', dur: 255, yt: '8jff2wz3Hpk', art: ['#8A2B12', '#F0782B'], moods: ['energetic', 'festive'], times: ['evening', 'night'] },
-  { id: 'morya', title: 'Morya Morya', artist: 'Traditional', dur: 244, yt: 'Abv3Rc3aTkY', art: ['#6B2E1F', '#E9A93C'], moods: ['festive'], times: ['night'] },
-  { id: 'jaidev', title: 'Jai Dev Jai Dev', artist: 'Traditional aarti', dur: 198, yt: 'lvtiy6szfwQ', art: ['#3F2A5E', '#F3C05A'], moods: ['devotional', 'spiritual'], times: ['evening', 'night'] },
-  { id: 'shanti', title: 'Shanti Path', artist: 'Traditional chant', dur: 336, yt: 'LA6Cx5axjbE', art: ['#14283A', '#C9B79A'], moods: ['meditative', 'peaceful'], times: ['night', 'morning'] },
+  // Morning
+  { id: 'ekadantaya', title: 'Ekadantaya Vakratundaya', artist: 'Shankar Mahadevan', dur: 360, yt: 're88S-5fpmA', art: ['#3A2A5E', '#E9A93C'], moods: ['meditative', 'devotional'], times: ['morning'] },
+  { id: 'vakratunda', title: 'Vakratunda Mahakaya', artist: 'Suresh Wadkar', dur: 230, yt: 'BRL8z-UAGDo', art: ['#4B2E83', '#E9A93C'], moods: ['meditative', 'peaceful'], times: ['morning'] },
+  { id: 'ganeshdhun', title: 'Ganesh Dhun', artist: 'Shankar Mahadevan', dur: 297, yt: 'aLlJpfr0mV0', art: ['#8A2B12', '#E9A93C'], moods: ['meditative', 'devotional'], times: ['morning'] },
+  { id: 'ganeshchalisa', title: 'Ganesh Chalisa', artist: 'Shankar Mahadevan', dur: 300, yt: 'JNCnzcVIcuw', art: ['#123A46', '#E9A93C'], moods: ['meditative', 'devotional'], times: ['morning'] },
+  { id: 'omgan', title: 'Om Gan Ganpataye Namo Namah', artist: 'Shankar Mahadevan', dur: 367, yt: 'c_063To9M8o', art: ['#2C3F6B', '#D8C6A6'], moods: ['meditative', 'devotional'], times: ['morning'] },
+  { id: 'morya', title: 'Morya Morya', artist: 'Manish Rajgire', dur: 244, yt: 'Abv3Rc3aTkY', art: ['#6B2E1F', '#E9A93C'], moods: ['festive'], times: ['morning'] },
+  { id: 'omkar', title: 'Omkar Swaroopa', artist: 'Ravindra Sathe', dur: 289, yt: '2gxvEnH-Lgs', art: ['#2C3F6B', '#E9A93C'], moods: ['spiritual', 'devotional'], times: ['morning'] },
+  { id: 'shanti', title: 'Shanti Path', artist: 'Traditional chant', dur: 336, yt: 'LA6Cx5axjbE', art: ['#14283A', '#C9B79A'], moods: ['meditative', 'peaceful'], times: ['morning'] },
+  // Afternoon–Evening
+  { id: 'sukhkarta', title: 'Sukhkarta Dukhharta', artist: 'Lata Mangeshkar', dur: 312, yt: 'h85xdHRX5T4', art: ['#8E2436', '#F3C05A'], moods: ['devotional', 'peaceful'], times: ['evening'] },
+  { id: 'shendur', title: 'Shendur Laal Chadhayo', artist: 'Ravindra Sathe', dur: 258, yt: 'vVgz3Pg-EMs', art: ['#A83B2A', '#F5D08A'], moods: ['devotional'], times: ['evening'] },
+  { id: 'ganraj', title: 'Ganraj Rangi Nachto', artist: 'Lata Mangeshkar', dur: 271, yt: 'egz1xOLfKRA', art: ['#7A1F3D', '#F0A93C'], moods: ['devotional', 'festive'], times: ['evening'] },
+  { id: 'jaidev', title: 'Jai Dev Jai Dev', artist: 'Traditional aarti', dur: 198, yt: 'lvtiy6szfwQ', art: ['#3F2A5E', '#F3C05A'], moods: ['devotional', 'spiritual'], times: ['evening'] },
+  { id: 'heyganaraya', title: 'Hey Ganaraya', artist: 'Divya Kumar', dur: 292, yt: 'v10jDT7SJsw', art: ['#B5472E', '#F0A93C'], moods: ['festive', 'energetic'], times: ['evening'] },
+  { id: 'ganraya', title: 'Ganraya', artist: 'Snigdhajit Bhowmik, Fukra Insaan', dur: 232, yt: '8LBjCghCyvA', art: ['#C0341C', '#F2C066'], moods: ['festive', 'energetic'], times: ['evening'] },
+  { id: 'heybappamorya', title: 'Hey Bappa Morya', artist: 'Sonu Nigam, Shankar Mahadevan', dur: 213, yt: 'woNa-KD1Cgg', art: ['#7A1F3D', '#F5D08A'], moods: ['devotional', 'festive'], times: ['evening'] },
+  { id: 'morayavinayaka', title: 'Moraya Vinayaka', artist: 'Shankar Mahadevan', dur: 233, yt: 'rOuZ3yddxpg', art: ['#A83B2A', '#E9A93C'], moods: ['devotional', 'festive'], times: ['evening'] },
+  { id: 'ganeshtandav', title: 'Ganesh Tandav Stotram', artist: 'Shankar Mahadevan', dur: 387, yt: 'OOWveA63cjI', art: ['#123A46', '#F0A93C'], moods: ['devotional', 'energetic'], times: ['evening'] },
+  // Night
+  { id: 'aalareganesha', title: 'Aala Re Aala Ganesha', artist: 'Wajid Khan, Ganesh Chandanshive', dur: 331, yt: 'JWHnsYVPTuI', art: ['#7A2E1E', '#F2A63C'], moods: ['festive', 'energetic'], times: ['night'] },
+  { id: 'gajanana', title: 'Gajanana', artist: 'Sukhwinder Singh', dur: 281, yt: 'KJF8t-BWVRM', art: ['#B5472E', '#FFD98A'], moods: ['festive', 'energetic'], times: ['night'] },
+  { id: 'devashree', title: 'Deva Shree Ganesha', artist: 'Ajay-Atul', dur: 295, yt: 'RCCYorPLJmQ', art: ['#C0341C', '#F7C356'], moods: ['energetic', 'festive'], times: ['night'] },
+  { id: 'dankabaja', title: 'Danka Baja', artist: 'Dev Negi', dur: 183, yt: 'dsl8UKnLlQM', art: ['#9A2A1E', '#F5B24A'], moods: ['energetic', 'festive'], times: ['night'] },
+  { id: 'ganeshanthem', title: 'Ganesh Anthem', artist: 'Shankar Mahadevan, Manjiri Iyer, Thaman S', dur: 280, yt: 'Pyeo6iNlsWs', art: ['#7A1F3D', '#F2A63C'], moods: ['energetic', 'festive'], times: ['night'] },
+  { id: 'mouryare', title: 'Mourya Re', artist: 'Shankar Mahadevan', dur: 255, yt: '8jff2wz3Hpk', art: ['#8A2B12', '#F0782B'], moods: ['energetic', 'festive'], times: ['night'] },
+  { id: 'shambhusutaya', title: 'Shambhu Sutaya', artist: 'Shankar Mahadevan, Vishal Dadlani', dur: 285, yt: 'DOvG7MC8i7E', art: ['#8E2C4A', '#F0A93C'], moods: ['energetic', 'festive'], times: ['night'] },
+  { id: 'saddadilvitu', title: 'Sadda Dil Vi Tu (Ga Ga Ga Ganpati)', artist: 'Hard Kaur, Sachin-Jigar', dur: 329, yt: 'ILnYRHmvJOI', art: ['#A8321C', '#F5C24A'], moods: ['energetic', 'festive'], times: ['night'] },
+  { id: 'bappa', title: 'Bappa', artist: 'Vishal Dadlani', dur: 220, yt: 'sHkd4XxKPdU', art: ['#7A3B12', '#F2C066'], moods: ['festive', 'energetic'], times: ['night'] },
+  { id: 'rajeoraje', title: 'Raje O Raje', artist: 'Sachet-Parampara', dur: 200, yt: '_LNtu1vDeec', art: ['#3F2A5E', '#E9A93C'], moods: ['devotional', 'festive'], times: ['night'] },
+  { id: 'jaishreeganesha', title: 'Jai Shree Ganesha', artist: 'Shankar Mahadevan, Siddharth Mahadevan, Shivam Mahadevan', dur: 240, yt: '2ffqE2w7aOg', art: ['#8A2B12', '#F2C066'], moods: ['devotional', 'festive'], times: ['night'] },
 ];
 
 export const TOPICS = {
@@ -52,27 +71,11 @@ export const TOPICS = {
       'Twenty-one are offered at the puja. Families still fold them by hand the night before the festival begins.',
     ],
   },
-  murti: {
-    label: 'The idol on the plinth', eyebrow: 'The guest', title: 'Ten days in the house',
-    body: [
-      'For these ten days the idol is not an object in a shrine. He is a guest: woken in the morning, bathed, dressed, fed twice a day, sung to at dawn and dusk.',
-      'The clay is chosen with the ending in mind. River clay dissolves; plaster does not, which is why so many mandals have gone back to the older material.',
-      'Everything around him — the arch, the garlands, the fruit at his feet — is rebuilt from scratch every year by the people who live on this lane.',
-    ],
-  },
-  diya: {
-    label: 'The aarti trays held by the crowd', eyebrow: 'The light', title: 'The diya',
-    body: [
-      'A clay cup, oil or ghee, a twist of cotton. The diya is the oldest thing in the frame, and the cheapest.',
-      'Lamps are lit at dusk and again for aarti, when the flame is circled before the idol and then passed around so everyone can hold their hands over it and touch them to their eyes.',
-      'One is enough to see by. The reason there are hundreds is that everybody brings their own.',
-    ],
-  },
   marigold: {
     label: 'The marigold strands overhead', eyebrow: 'The decoration', title: 'Why marigolds everywhere?',
     body: [
       'Zendu — marigold — is the flower of Indian festival because it is stubborn. It holds its colour for days off the stem and grows almost anywhere.',
-      'The strands are strung by hand in the days before, usually by whoever in the lane is free. A long garland is called a toran, and it marks a threshold: you are entering somewhere.',
+      'A long garland is called a toran, and it marks a threshold: you are entering somewhere.',
       'The colour is the point too. Orange and yellow for the sun, and for what people wish on the year ahead.',
     ],
   },
@@ -91,15 +94,7 @@ export const TOPICS = {
       'A pathak is the troupe that plays it — often a hundred or more, mostly volunteers, rehearsing for months in a school ground before the ten days begin.',
       'They set the pace of the procession. When the drums stop, the whole street stops with them.',
     ],
-  },
-  aarti: {
-    label: 'The priest performing aarti', eyebrow: 'The ritual', title: 'What the aarti is doing',
-    body: [
-      'The lamp is circled clockwise before the idol while the whole lane sings — the same five or six verses that everyone here learned as a child.',
-      'It closes with the flame carried out into the crowd. You pass your palms over it and touch them to your forehead; the light is meant to be taken away, not left behind.',
-      'Then prasad goes around, and the street goes back to being a street until the next one.',
-    ],
-  },
+  }
 };
 
 // Intrinsic artwork sizes, used to replicate background-size:cover when pinning.
@@ -118,7 +113,6 @@ export const PINS = [
 
 export const STORY_FACTS = [
   { text: 'Bhadrapada Shukla Chaturthi — his birthday' },
-  { text: 'Ten days, one guest in the house' },
   { text: 'Public since 1893' },
 ];
 
@@ -128,54 +122,55 @@ export const CHAPTERS = [
     icon: 'M12 3c-2.4 2.2-3.6 4.3-3.6 6.3 0 2 1.6 3.7 3.6 3.7s3.6-1.7 3.6-3.7C15.6 7.3 14.4 5.2 12 3zM7 20.5c1.2-1.2 3-1.8 5-1.8s3.8.6 5 1.8M12 13v6',
     title: 'The one you greet first',
     body: 'Before any journey, any wedding, any new shop or exam or ledger — Ganesha is greeted first. He is Vighnaharta, remover of obstacles, and Buddhi-data, giver of intelligence.',
-    body2: 'The elephant head holds the story most people know: Parvati shaped a boy from turmeric paste to guard her door, Shiva returned to find a stranger refusing him entry, and what followed was repaired with the head of the first creature found facing north.',
-    pull: 'Read another way, the form is instruction — large ears to listen, small eyes to concentrate, a trunk strong enough to uproot a tree and fine enough to lift a needle.',
+    body2: 'Ganesha was born from the love and divine power of Goddess Parvati. Wishing for a guardian of her own, she created a child from the sacred turmeric paste of her body and breathed life into him. She named him Ganesha and entrusted him with a simple duty — to guard her door and let no one enter without her permission.',
+    body3: 'When Lord Shiva returned and found a young boy blocking his way, a fierce encounter followed. In the struggle, Ganesha lost his head. Seeing Parvati’s grief, Shiva promised to restore her son. The head of an elephant was placed upon him, and Ganesha was brought back to life, becoming the beloved remover of obstacles and the lord of new beginnings.',
+    pull: 'Born of devotion, restored by love, and blessed with the wisdom of an elephant — Ganesha became the guardian of every beginning.',
   },
   {
-    num: '02', era: 'Origins',
+    num: '02', era: 'The occasion',
+    icon: 'M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z',
+    title: 'What is Ganesh Chaturthi?',
+    body: 'Ganesh Chaturthi is a celebration of the birth of Lord Ganesha, the beloved remover of obstacles and the guardian of new beginnings. It is a time when families welcome him into their homes with prayers, offerings and devotion, celebrating his presence with love and reverence.',
+    body2: 'The word Chaturthi means the fourth day of the lunar fortnight. Ganesh Chaturthi falls on the fourth day of the waxing moon in the month of Bhadrapada, marking the auspicious occasion of Ganesha’s birth.',
+    pull: 'The fourth day of the waxing moon, kept every year as the day Ganesha came home.',
+  },
+  {
+    num: '03', era: 'Origins & Patronage',
     icon: 'M12 3l1.9 4.3 4.6.5-3.4 3.1.9 4.6L12 13.3 8 15.5l.9-4.6L5.5 7.8l4.6-.5L12 3zM12 17v4',
-    title: 'From household shrine to Chaturthi',
-    body: 'Ganesha worship is old, layered and largely domestic. Verses in the Puranas fix his place at the head of every rite; the Ganapati Atharvashirsha gives him a devotional text of his own.',
-    body2: 'Ganesh Chaturthi marks his birth, on the fourth day of the waxing moon in Bhadrapada. For centuries it was a household observance — an idol of river clay, a family puja, a quiet immersion in the nearest water.',
-    pull: 'For most of its life this was a festival you would only see if you were invited inside.',
-  },
-  {
-    num: '03', era: 'Patronage',
-    icon: 'M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6',
-    title: 'The Peshwa street',
-    body: 'Under the Peshwas in eighteenth-century Pune the festival stepped outside. Rulers sponsored public celebration, and the city built the habit of a shared civic occasion around it.',
-    body2: 'When that patronage ended with the fall of the Peshwa state, the public festival receded. It went back indoors, and stayed there for most of a century.',
-    pull: 'Without someone to fund it, the celebration simply went back behind closed doors.',
+    title: 'From household shrine to public festival',
+    body: 'For centuries this was a household observance — an idol of river clay, a family puja, a quiet immersion in the nearest water. It isn’t known when or how Ganesh Chaturthi first began, but Pune has celebrated it publicly since the era of Chhatrapati Shivaji, the seventeenth-century founder of the Maratha Empire. He used the celebration as a means to promote harmony and unity across castes',
+    body2: 'The Peshwas who ruled after him were devotees of Ganesha in their own right, and it was they who turned that devotion into a public festival — held every year in their capital, Pune, through the month of Bhadrapad.',
+    pull: 'A ruling family’s own devotion, opened up into a festival for the whole capital.',
   },
   {
     num: '04', era: '1893',
     icon: 'M4 21V6l8-3v18M12 21V9l8 3v9M8 9h.01M8 13h.01M16 15h.01',
     title: 'Tilak makes it public',
-    body: 'Colonial law restricted political assembly. It did not restrict religious assembly. In 1893 Bal Gangadhar Tilak began organising the Sarvajanik Ganeshotsav — the people’s Ganesh festival — in Pune.',
-    body2: 'Idols were installed in public mandaps, funded by neighbourhood subscription, open to anyone who walked in. Ten days of lectures, songs, theatre and debate.',
-    pull: 'Ten days of lawful crowd. A festival that was also a meeting, in plain sight.',
+    body: 'That patronage did not survive the British Raj. Once state support fell away, the festival shrank back into a private, family observance across Maharashtra.',
+    body2: 'It was Bal Gangadhar Tilak — freedom fighter and social reformer — who revived it, championing the festival as a way around the colonial government’s 1892 law banning public Hindu assembly. He relaunched it in Pune and in Girgaon, Mumbai.',
+    pull: 'A law built to stop a crowd from gathering, answered with a festival the law could not touch.',
   },
   {
     num: '05', era: 'The mandal',
     icon: 'M16 20v-2a4 4 0 0 0-8 0v2M12 12a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zM5.5 20v-1.5a3 3 0 0 1 2-2.8M18.5 20v-1.5a3 3 0 0 0-2-2.8',
     title: 'A festival the street runs itself',
-    body: 'What Tilak started outlived its politics. The mandal — the neighbourhood committee — became the real institution: collecting funds, commissioning the idol, feeding visitors, arranging the pathak, organising the visarjan.',
-    body2: 'Because the mandap sits on public ground, it belongs to whoever arrives. In Mumbai’s older lanes the queues run for hours and hold every kind of person the city has.',
-    pull: 'Nobody owns the mandap. That is the whole design.',
+    body: 'What Tilak began grew into something much bigger. The mandal — the neighbourhood committee — became the heart of Ganesh Chaturthi. It is where people come together to welcome the idol, collect funds, feed visitors, arrange the pathak and prepare for the final visarjan.',
+    body2: 'The mandap belongs to everyone. Set on public ground, it welcomes all who arrive. During the festival, devotees stand in long queues, patiently waiting for a glimpse of Ganesha and his blessings — united by faith, devotion and love.',
+    pull: 'A shared space of faith, where every devotee arrives with a prayer and leaves with a blessing',
   },
   {
-    num: '06', era: 'Now',
+    num: '06', era: 'At present',
     icon: 'M3 15c1.8 0 1.8-1.5 3.6-1.5S8.4 15 10.2 15s1.8-1.5 3.6-1.5S15.6 15 17.4 15s1.8-1.5 3.6-1.5M3 19.5c1.8 0 1.8-1.5 3.6-1.5s1.8 1.5 3.6 1.5 1.8-1.5 3.6-1.5 1.8 1.5 3.6 1.5 1.8-1.5 3.6-1.5M12 3v7M9 6l3-3 3 3',
-    title: 'Ten days, then the water',
-    body: 'The festival still ends the way it always did. On Anant Chaturdashi the idol is carried out through the streets it arrived by, and given to the water.',
-    body2: 'Plaster and chemical paint have made that ending costly, and a slow shift is underway — back to river clay, to natural colour, to immersion tanks that let a city keep its lakes.',
-    pull: 'What you welcome with love, you also learn to release. The parting line has not changed: come early next year.',
+    title: 'Until We Meet Again',
+    body: 'While the public celebration traditionally culminates on Anant Chaturdashi, many families welcome Ganesha into their homes for different durations — 1, 3, 5, 7, 11, or even 21 days — guided by their own customs, Sankalpa, and regional traditions.',
+    body2: 'Whenever the time comes, the idol is carried out through the streets, accompanied by prayers, music and the familiar call of “Ganpati Bappa Morya.” And then, with love and faith, he is returned to the water. Plaster and chemical paint have made that ending costly, and a slow shift is underway — back to river clay, to natural colour, to immersion tanks that let a city keep its lakes.',
+    pull: 'What we welcome with love, we learn to release with faith. The parting words remain the same: come early next year, Bappa.',
   },
 ];
 
 export const ABOUT_STATS = [
   { icon: 'M12 3v3M5.6 5.6l2.1 2.1M3 12h3M5.6 18.4l2.1-2.1M12 21v-3M18.4 18.4l-2.1-2.1M21 12h-3M18.4 5.6l-2.1 2.1M14.5 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z', value: 'Three modes', label: 'The scene follows your clock' },
-  { icon: 'M9 18V6l10-2v12M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM19 16a3 3 0 1 1-6 0 3 3 0 0 1 6 0z', value: 'Twelve songs', label: 'Grouped by time of day' },
+  { icon: 'M9 18V6l10-2v12M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM19 16a3 3 0 1 1-6 0 3 3 0 0 1 6 0z', value: `${SONGS.length} songs`, label: 'Grouped by time of day' },
   { icon: 'M12 21s-7-4.4-7-9.5A4.5 4.5 0 0 1 12 8a4.5 4.5 0 0 1 7 3.5C19 16.6 12 21 12 21z', value: 'Hotspots', label: 'Things on the street, explained' },
 ];
 
@@ -183,21 +178,29 @@ export const ABOUT_SECTIONS = [
   {
     icon: 'M12 21s-7-4.4-7-9.5A4.5 4.5 0 0 1 12 8a4.5 4.5 0 0 1 7 3.5C19 16.6 12 21 12 21z',
     title: 'How this came about',
-    body: 'Every year the lane outside my house turns into a pandal — lights strung between balconies, a speaker that never sleeps, camphor in the air after the evening aarti. Living away from it, I wanted a single page that gives that street back.',
+    body: 'Every year Ganesh Chaturthi brings its own vibe and energy — streets lit up, music playing, people gathering to welcome him home. It is one of the most widely celebrated festivals across India, and I wanted a single page that gives that feeling back.',
     points: [
-      { text: 'A night scene instead of a homepage — you arrive already inside the festival.' },
+      { text: 'One street, staged as a living scene, carrying the music, the story and the little details of the festival.' },
       { text: 'The hour you open it in decides the light, the note in the corner and what plays.' },
       { text: 'The story kept in its own room, for whoever is curious enough to open it.' },
     ],
   },
 ];
 
-export const ABOUT_LINKS = [
-  { label: 'Ganesh Chaturthi — background reading', note: 'add link' },
-  { label: 'Aarti and bhajan credits', note: 'add link' },
-  { label: 'Illustration source', note: 'add link' },
-  { label: 'Source code', note: 'github' },
-];
+export const ABOUT_IDEA = {
+  body: [
+    "I spend a fair bit of time on sites that take an ordinary idea and turn it into something you actually want to sit with — a radio station, a bus route, a roadside saloon. A few of these stuck with me and got me thinking about what I could build in the same spirit.",
+    "Ganesh Chaturthi was right around the corner, and everyone nearby was playing Ganpati songs on loop — so the idea landed: a single page for that. It turned out to be the most fun I've had building anything.",
+    "Putting it together also had me pausing more than once to check a story or a fact about Ganesha properly before writing it down — which is how the story and the street hotspots on this site came to be.",
+  ],
+  inspirations: [
+    { label: 'Gali', url: 'https://gali-fm.vercel.app/' },
+    { label: 'Bus Driver', url: 'https://busdriver.wtf/' },
+    { label: 'Deluxe Saloon', url: 'https://www.deluxesaloon.space/' },
+  ],
+};
+
+export const ABOUT_DISCLAIMER = 'This website is built purely for non-commercial purposes — to collect and play Ganesh songs in one place for the festival. All credit for the music belongs to the original singers, composers, lyricists and labels. No copyright or ownership is claimed over any of the songs; they are embedded here only in celebration of the festival, and will be taken down on request from a rights holder.';
 
 export const NAV_ITEMS = [
   { key: 'home', label: 'Home' },

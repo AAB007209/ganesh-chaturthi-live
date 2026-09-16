@@ -20,6 +20,13 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 11px;
 ::selection { background: rgba(224,102,42,.4); }
 select option { background: #14110F; color: #F2E3C6; }
 
+/* Themed scrollbar for the panels/pages that scroll their own content */
+.gc-scroll { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: rgba(233,169,60,.45) transparent; }
+.gc-scroll::-webkit-scrollbar { width: 7px; }
+.gc-scroll::-webkit-scrollbar-track { background: transparent; }
+.gc-scroll::-webkit-scrollbar-thumb { background: rgba(233,169,60,.4); border-radius: 999px; }
+.gc-scroll::-webkit-scrollbar-thumb:hover { background: rgba(233,169,60,.7); }
+
 @keyframes emberRise {
   0% { transform: translateY(0) scale(.9); opacity: 0; }
   25% { opacity: .75; }
@@ -53,7 +60,6 @@ select option { background: #14110F; color: #F2E3C6; }
 .gc-play-btn:hover { background: radial-gradient(circle at 34% 28%,#FF9C4C,#EA6E2E); }
 .gc-credit-link:hover { opacity: 1; }
 .gc-hamburger:hover { background: rgba(242,227,198,.1); }
-.gc-centre-pill:hover { color: #F6E9D0; border-color: rgba(233,169,60,.45); }
 .gc-picker:hover { border-color: rgba(233,169,60,.55); }
 .gc-hotspot:hover { transform: scale(1.08); }
 .gc-panel-close:hover { color: #F6E9D0; background: rgba(255,255,255,.09); }

@@ -5,7 +5,7 @@ export default function DiscoveryPanel() {
   const { topicEyebrow, topicTitle, topicBody, panelOpacity, panelEvents, panelSlide, closePanel } = useApp();
 
   return (
-    <div style={{
+    <div className="gc-scroll" style={{
       position: 'absolute', zIndex: 44, right: 'clamp(16px,2.2vw,28px)', top: '50%',
       width: 'min(400px,calc(100vw - 44px))', maxHeight: '72vh', overflowY: 'auto',
       transform: `translateY(-50%) translateX(${panelSlide})`, opacity: panelOpacity, pointerEvents: panelEvents,

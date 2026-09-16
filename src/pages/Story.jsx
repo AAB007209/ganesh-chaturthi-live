@@ -11,7 +11,7 @@ export default function Story() {
         display: 'flex', flexDirection: 'column', gap: 16,
       }}>
         <span style={{ fontSize: 11, letterSpacing: '.34em', textTransform: 'uppercase', color: 'rgba(246,236,214,.6)' }}>The story</span>
-        <h1 style={{ margin: 0, fontFamily: "'Cormorant Garamond',serif", fontWeight: 500, fontSize: 'clamp(38px,5.6vw,78px)', lineHeight: 1.02, color: '#F6E9D0', textWrap: 'pretty' }}>From one home to every street</h1>
+        <h1 style={{ margin: 0, fontFamily: "'Cormorant Garamond',serif", fontWeight: 500, fontSize: 'clamp(38px,5.6vw,78px)', lineHeight: 1.02, color: '#F6E9D0', textWrap: 'pretty' }}>From quiet prayers to grand celebrations</h1>
         <p style={{ margin: 0, fontSize: 17, lineHeight: 1.75, color: 'rgba(246,236,214,.94)', maxWidth: '60ch', textWrap: 'pretty' }}>Six moments, from a turmeric figure at a doorway to a hundred-strong drum troupe walking an idol down to the sea.</p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 9, marginTop: 6 }}>
           {STORY_FACTS.map((f, idx) => (
@@ -43,6 +43,7 @@ export default function Story() {
             <h2 style={{ margin: 0, fontFamily: "'Cormorant Garamond',serif", fontWeight: 500, fontSize: 'clamp(26px,3.4vw,42px)', lineHeight: 1.12, color: '#F6E9D0', textWrap: 'pretty' }}>{ch.title}</h2>
             <p style={{ margin: 0, fontSize: 16, lineHeight: 1.8, color: 'rgba(246,236,214,.94)', textWrap: 'pretty' }}>{ch.body}</p>
             <p style={{ margin: 0, fontSize: 16, lineHeight: 1.8, color: 'rgba(246,236,214,.94)', textWrap: 'pretty' }}>{ch.body2}</p>
+            {ch.body3 && <p style={{ margin: 0, fontSize: 16, lineHeight: 1.8, color: 'rgba(246,236,214,.94)', textWrap: 'pretty' }}>{ch.body3}</p>}
             <div style={{ marginTop: 6, padding: '14px 18px', borderRadius: 12, background: 'rgba(233,169,60,.08)', borderLeft: '2px solid rgba(233,169,60,.5)' }}>
               <span style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 19, lineHeight: 1.5, color: 'rgba(255,226,170,.98)', textWrap: 'pretty' }}>{ch.pull}</span>
             </div>
